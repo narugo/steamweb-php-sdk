@@ -27,7 +27,7 @@ require 'Slim/Slim.php';
 require 'Unirest.php';
 require 'steamwebapi_config.php';
 
-const STEAM_WEB_API_BASE_URL = 'http://api.steampowered.com';
+const STEAM_WEB_API_BASE_URL = 'https://api.steampowered.com';
 
 \Slim\Slim::registerAutoloader();
 
@@ -58,6 +58,9 @@ function get($app, $endpoint) {
 
     $app->response->setStatus($response->code);
     foreach ($response->headers as $key => $value) {
+    	if ($key === 'Content-Encoding') {
+    		continue;
+    	}
         $app->response->headers->set($key, $value);
     }
 
