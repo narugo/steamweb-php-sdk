@@ -75,7 +75,7 @@ $app->group('/ISteamUser', function () use ($app) {
 
     $app->group('/GetPlayerSummaries', function () use ($app) {
 
-        $app->get('/v0002', function () use ($app) {
+        $app->get('/v0002/', function () use ($app) {
             get($app, '/ISteamUser/GetPlayerSummaries/v0002/');
         });
 
