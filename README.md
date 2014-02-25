@@ -42,6 +42,10 @@ you can create new Slim routes. Interfaces and methods are separated by groups
 to avoid repeating the same URL segments for multiple routes:
 
 ```php
+/********************************************************************************
+* IDOTA2Match_570
+*******************************************************************************/
+
 $app->group('/IDOTA2Match_570', function () use ($app) {
 
     $app->group('/GetMatchHistory', function () use ($app) {
