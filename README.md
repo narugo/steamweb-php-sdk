@@ -10,3 +10,8 @@ http://www.slimframework.com/install
 
 Install Unirest for PHP from source from GitHub
 http://unirest.io/php.html
+
+Configuration
+=============
+
+Set your Steam Web API key in steamwebapi_config.php
