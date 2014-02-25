@@ -1,4 +1,4 @@
-steamweb-php-sdk
+Steam Web PHP SDK
 ================
 
-An SDK for interfacing with Steam's Web API using Lua
+An SDK for interfacing with Steam's Web API using PHP
