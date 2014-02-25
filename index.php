@@ -26,21 +26,21 @@ $app->notFound(function () {
 });
 
 function get($app, $endpoint) {
-	$parameters = ['key' => STEAM_WEB_API_KEY];
+    $parameters = ['key' => STEAM_WEB_API_KEY];
     foreach ($app->request->get() as $key => $value) {
-    	$parameters[$key] = $value;
+        $parameters[$key] = $value;
     }
 
     $response = Unirest::get(STEAM_WEB_API_BASE_URL . $endpoint,
-    						 NULL,
-    						 $parameters);
+                             NULL,
+                             $parameters);
 
     $app->response->setStatus($response->code);
     foreach ($response->headers as $key => $value) {
-    	$app->response->headers->set($key, $value);
+        $app->response->headers->set($key, $value);
     }
 
-    return $response->raw_body;
+    echo $response->raw_body;
 }
 
 $app->group('/ISteamUser', function () use ($app) {
@@ -48,7 +48,7 @@ $app->group('/ISteamUser', function () use ($app) {
     $app->group('/GetPlayerSummaries', function () use ($app) {
 
         $app->get('/v0002', function () use ($app) {
-        	echo get($app, '/ISteamUser/GetPlayerSummaries/v0002/');
+            get($app, '/ISteamUser/GetPlayerSummaries/v0002/');
         });
 
     });

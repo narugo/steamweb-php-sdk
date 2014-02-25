@@ -47,11 +47,10 @@ $app->group('/IDOTA2Match_570', function () use ($app) {
     $app->group('/GetMatchHistory', function () use ($app) {
 
         $app->get('/v001', function () use ($app) {
-        	echo get($app, '/IDOTA2Match_570/GetMatchHistory/v001/');
+        	get($app, '/IDOTA2Match_570/GetMatchHistory/v001/');
         });
 
     });
 
 });
-
 ```
