@@ -31,7 +31,7 @@ Normally, you'd make a request to the Steam Web API like so:
 for usage on the client-side, however. To use it in your applications, simply
 change the base URL to your API proxy URL.
 
-**_http://example.com/steamwebapi/_**_ISteamUser/GetPlayerSummaries/v0002/?key=XXXXXXXXXXXXXXXXXXXXXXX&steamids=76561198041546169_
+**_http://example.com/steamwebapi/_**_ISteamUser/GetPlayerSummaries/v0002/?steamids=76561198041546169_
 
 Extending
 =========
