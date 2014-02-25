@@ -27,7 +27,7 @@ require 'Slim/Slim.php';
 require 'Unirest.php';
 require 'steamwebapi_config.php';
 
-const STEAM_WEB_API_BASE_URL = 'https://api.steampowered.com';
+const STEAM_WEB_API_BASE_URL = 'http://api.steampowered.com';
 
 \Slim\Slim::registerAutoloader();
 
