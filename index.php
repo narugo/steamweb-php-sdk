@@ -46,7 +46,8 @@ $app->get(
 $app->notFound(function () {
 });
 
-function get($app, $endpoint) {
+function get($app, $endpoint)
+{
     $parameters = ['key' => STEAM_WEB_API_KEY];
     foreach ($app->request->get() as $key => $value) {
         $parameters[$key] = $value;
