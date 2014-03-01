@@ -23,8 +23,8 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-require 'Slim/Slim.php';
-require 'Unirest.php';
+require 'lib/Slim/Slim.php';
+require 'lib/Unirest.php';
 require 'steamwebapi_config.php';
 
 const STEAM_WEB_API_BASE_URL = 'http://api.steampowered.com';
@@ -78,6 +78,14 @@ $app->group('/ISteamUser', function () use ($app) {
 
         $app->get('/v0002/', function () use ($app) {
             get($app, '/ISteamUser/GetPlayerSummaries/v0002/');
+        });
+
+    });
+
+    $app->group('/GetFriendList', function () use ($app) {
+
+        $app->get('/v0001/', function () use ($app) {
+            get($app, '/ISteamUser/GetFriendList/v0001/');
         });
 
     });
